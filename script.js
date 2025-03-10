@@ -28,14 +28,14 @@ const weatherContainer = document.getElementById("sec2");
         const json1 = await response1.json();
         console.log(json1);
         weatherContainer.innerHTML = `
-            <h2>Weather in ${city}</h2>
-            <p>Temperature: ${json1.main.temp}°C</p>
-            <p>Feels Like: ${json1.main.feels_like}°C</p>
-            <p>Min: ${json1.main.temp_min}°C</p>
-            <p>Max: ${json1.main.temp_max}°C</p>
-            <p>Humidity: ${json1.main.humidity}%</p>
-            <p>Wind speed: ${json1.wind.speed}%</p>
-            <p>Description: ${json1.weather[0].description}</p>
+            <h2 style="color: blue;">Weather in ${city}</h2> 
+            <p style="color: red;">Temperature: ${json1.main.temp}°C</p>
+            <p style="color: red;">Feels Like: ${json1.main.feels_like}°C</p>
+            <p style="color: red ;">Min: ${json1.main.temp_min}°C</p>
+            <p style="color: red;">Max: ${json1.main.temp_max}°C</p>
+            <p style="color: red;">Humidity: ${json1.main.humidity}%</p>
+            <p style="color: red;">Wind speed: ${json1.wind.speed}%</p>
+            <p style="color: red;">Description: ${json1.weather[0].description}</p>
         `;
 
     }catch(error){

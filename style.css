@@ -1,0 +1,44 @@
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    text-align: center;
+}
+#h11{
+    display: flex;
+    background-color: white;
+    color: green;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: dotted;
+    border-radius: 10px;
+    border-color: blue;
+
+}
+#h2{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.842);
+    color: rgb(0, 30, 128);
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: dotted;
+    border-radius: 10px;
+    border-color: blue;
+}
+#se{
+    display: flex;
+    background-color: wheat;
+    color: rgb(0, 81, 128);
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border: dotted;
+    border-radius: 10px;
+    border-color: blue;
+}
