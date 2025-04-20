@@ -1,32 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Application</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to WeatherNow</title>
+  <link rel="stylesheet" href="weather.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  
-  
-    <main>
-      
-        <section id="sec1">
-          <h1 id="h11">LIVE WEATHER APPLICATION</h1>
-          <h2 id="h2">Just enter the city name below and press the button to display the weather</h2>
-          <section id="se">
-            <label>Enter City Name</label>
-            <input type="text" id="input" placeholder="City Name">
-            <button id="btn" >Display Weather</button>
-          </section>
-            
-      </section>
+  <div class="welcome-wrapper">
+    <header class="welcome-header">
+      <div class="logo">
+        <i class="fas fa-cloud-sun"></i>
+        <h1>WeatherNow</h1>
+      </div>
+      <p class="tagline">Your personal weather companion, anywhere, anytime</p>
+    </header>
 
-      <section id="sec2">
-    
-      </section>
+    <main class="welcome-main">
+      <div class="welcome-container">
+        <div class="weather-animation">
+          <div class="sun"></div>
+          <div class="cloud"></div>
+          <div class="rain"></div>
+        </div>
+        
+        <h2>Discover Your Weather</h2>
+        <p>Get accurate, real-time weather updates for any location worldwide. Plan your day with confidence.</p>
+        
+        <form class="city-search" id="welcome-form">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="city-input" placeholder="Enter city name..." required>
+            <button type="submit" class="start-btn">
+              Get Weather <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+        
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-bolt"></i>
+            <p>Real-time updates</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Global coverage</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-bell"></i>
+            <p>Weather alerts</p>
+          </div>
+        </div>
+      </div>
     </main>
-  
- <script src="script.js"></script>
-  </body>
+
+    <footer class="welcome-footer">
+      <p>Created with <i class="fas fa-heart"></i> by Musala Ndouvhada</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Musala001/"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/musala-ndouvhada-78bb892b9/"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('welcome-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const city = document.getElementById('city-input').value.trim();
+      if (city) {
+        window.location.href = `weather.html?city=${encodeURIComponent(city)}`;
+      }
+    });
+  </script>
+</body>
 </html>
