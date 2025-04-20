@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // First get coordinates for the city
-            const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city},ZA&limit=1&appid=35a77c57fbff46d6e88b80e751f22dda`;
+            const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},ZA&limit=1&appid=35a77c57fbff46d6e88b80e751f22dda`;
             const geoResponse = await fetch(geoUrl);
             
             if (!geoResponse.ok) {
